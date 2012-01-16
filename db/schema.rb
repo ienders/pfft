@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120116064247) do
+ActiveRecord::Schema.define(:version => 20120116083238) do
 
   create_table "showings", :force => true do |t|
     t.string   "film_title"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20120116064247) do
     t.string   "poster_content_type"
     t.integer  "poster_file_size"
     t.datetime "poster_updated_at"
+    t.string   "director"
+    t.string   "imdb"
   end
 
   create_table "users", :force => true do |t|

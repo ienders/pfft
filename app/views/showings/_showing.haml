@@ -2,10 +2,13 @@
   .date
     = showing.showtime.strftime("%a %b %d, %Y @ %l:%M %p")
     - if user_signed_in?
+      = link_to('edit', edit_showing_path(showing))
       = link_to('delete', showing_path(showing), 'data-method' => 'delete')
   = image_tag(showing.poster.url, :alt => '')
   .info
     %h1
-      = showing.film_title
+      = link_to(showing.film_title, showing.imdb, :target => '_blank')
       %span (#{showing.film_year})
+    %p
+      %em Directed by #{showing.director}
     %p= showing.description

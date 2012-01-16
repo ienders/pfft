@@ -13,9 +13,19 @@ class ShowingsController < ApplicationController
     @showing = Showing.new
   end
 
+  def edit
+    @showing = Showing.find(params[:id])
+  end
+
   def create
     @showing = Showing.create(params[:showing])
-    redirect_to :action => 'new'
+    redirect_to :action => 'index'
+  end
+
+  def update
+    @showing = Showing.find(params[:id])
+    @showing.update_attributes(params[:showing])
+    redirect_to :action => 'index'
   end
 
   def destroy
