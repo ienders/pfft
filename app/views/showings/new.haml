@@ -1,0 +1,19 @@
+= form_for(@showing, :html => { :multipart => true }) do |f|
+  %h2 New Showing
+
+  %div= f.label :film_title
+  = f.text_field :film_title
+
+  %div= f.label :film_year
+  = f.text_field :film_year
+
+  %div= f.label :description
+  = f.text_area :description
+
+  %div= f.label :showtime
+  = f.datetime_select :showtime
+
+  %div= f.label :poster
+  = f.file_field :poster
+
+  %div= f.submit 'Post It'

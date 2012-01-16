@@ -1,0 +1,54 @@
+@import "mixins";
+
+.showings-header {
+  @include black-bg;
+  width: 530px;
+  float: right;
+  margin: 25px 0 25px 0;
+  padding: 10px;
+  font-size: 30px;
+  a {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0 10px;
+  }
+}
+.showings {
+  float: right;
+  margin: 0;
+  .showing {
+    float: left;
+    width: 530px;
+    padding: 10px;
+    @include black-bg;
+    margin-bottom: 10px;
+    .date {
+      padding: 0 10px 10px 10px;
+      font-size: 25px;
+      a {
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
+    img {
+      float: left;
+      height: 175px;
+      margin-left: 10px;
+      margin-right: 25px;
+    }
+    .info {
+      float: left;
+      width: 380px;
+      h1 {
+        margin: 0;
+        span {
+          font-size: 15px;
+        }
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+  }
+}

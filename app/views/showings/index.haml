@@ -1,0 +1,14 @@
+.page
+  .showings-header
+    = link_to('«', :offset => params[:offset] - 1)
+    - if params[:offset] == 0
+      This Month's Showings
+    - elsif params[:offset] == -1
+      Last Month's Showings
+    - elsif params[:offset] == 1
+      Next Month's Showings
+    - else
+      Showings for #{@month.strftime("%B %Y")}
+    = link_to('»', :offset => params[:offset] + 1)
+  .showings
+    = render :partial => 'showing', :collection => @showings

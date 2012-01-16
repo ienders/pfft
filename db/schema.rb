@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120116033229) do
+ActiveRecord::Schema.define(:version => 20120116064247) do
 
   create_table "showings", :force => true do |t|
     t.string   "film_title"
     t.integer  "film_year"
-    t.integer  "description"
+    t.text     "description"
     t.datetime "showtime"
     t.string   "poster_file_name"
     t.string   "poster_content_type"

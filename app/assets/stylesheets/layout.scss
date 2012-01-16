@@ -1,3 +1,5 @@
+@import "mixins";
+
 html {
   background: url(/images/bg1.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14,7 +16,7 @@ body {
 }
 
 .logo {
-  background-color: black;
+  @include black-bg;
   margin: 25px;
   font-weight: bold;
   font-size: 70px;
@@ -22,14 +24,22 @@ body {
   padding: 0 10px;
 }
 
-.clear {
-  clear: all;
-  clear: both;
+.page {
+  float: right;
+  width: 550px;
+}
+
+a {
+  color: #7954c4;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
 }
 
 form {
-  float: left;
-  background-color: black;
+  @include black-bg;
+  float: right;
   margin: 25px;
   padding: 10px;
 }

@@ -2,6 +2,8 @@ Pfft::Application.routes.draw do
 
   devise_for :users, :skip => [ :registrations ]
 
+  resources :showings
+
   root :to => 'showings#index'
 
   # The priority is based upon order of creation:
