@@ -1,0 +1,35 @@
+html {
+  background: url(/images/bg1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+.logo {
+  background-color: black;
+  margin: 25px;
+  font-weight: bold;
+  font-size: 70px;
+  float: left;
+  padding: 0 10px;
+}
+
+.clear {
+  clear: all;
+  clear: both;
+}
+
+form {
+  float: left;
+  background-color: black;
+  margin: 25px;
+  padding: 10px;
+}

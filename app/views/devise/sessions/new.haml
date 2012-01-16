@@ -1,0 +1,10 @@
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  %h2 Sign In
+
+  %div= f.label :email
+  = f.email_field :email
+
+  %div= f.label :password
+  = f.password_field :password
+
+  %div= f.submit 'Sign in'

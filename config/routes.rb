@@ -1,4 +1,8 @@
 Pfft::Application.routes.draw do
+  devise_for :users
+
+  root :to => 'showings#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
