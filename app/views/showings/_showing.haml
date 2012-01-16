@@ -3,7 +3,7 @@
     = showing.showtime.strftime("%a %b %d, %Y @ %l:%M %p")
     - if user_signed_in?
       = link_to('delete', showing_path(showing), 'data-method' => 'delete')
-  = image_tag(showing.poster.url)
+  = image_tag(showing.poster.url, :alt => '')
   .info
     %h1
       = showing.film_title

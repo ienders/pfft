@@ -11,4 +11,18 @@
       Showings for #{@month.strftime("%B %Y")}
     = link_to('»', :offset => params[:offset] + 1)
   .showings
-    = render :partial => 'showing', :collection => @showings
+    - if @showings.size > 0
+      = render :partial => 'showing', :collection => @showings
+    - else
+      .showing
+        %p
+          %em Nothing to see here buddy. Maybe you should read the rules instead.
+        %h1 *pagerduty film fun time rules
+        %ol.rules
+          %li <strong>*pfft</strong> is not a democracy. Ian makes all final decisions on movies.
+          %li <strong>*pfft</strong> takes suggestions for future film viewings into consideration, but makes no promises that suggestions will be respected.
+          %li <strong>*pfft</strong> is responsible for acquiring all films for viewing.
+          %li <strong>*pfft</strong> may provide minor refreshments and/or snacks, but makes no guarantees on availability or quality.
+          %li <strong>*pfft</strong> makes no guarantees on seating. First come, first serve.
+          %li <strong>*pfft</strong> has the right to refuse admission to those who would cause a ruckus or generally hinder the enjoyment of the films for others.
+          %li All <strong>*pfft</strong> viewings will be at the <strong>*pfft</strong> clubhouse unless otherwise noted in film description.
