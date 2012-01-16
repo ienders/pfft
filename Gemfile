@@ -7,6 +7,7 @@ gem 'thin'
 gem 'paperclip'
 gem 'devise'
 gem 'haml'
+gem 'aws-s3', :require => 'aws/s3'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
