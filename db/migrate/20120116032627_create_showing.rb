@@ -3,7 +3,7 @@ class CreateShowing < ActiveRecord::Migration
     create_table :showings do |t|
       t.string :film_title
       t.integer :film_year
-      t.string :description
+      t.text :description
       t.datetime :showtime
 
       t.string :poster_file_name
