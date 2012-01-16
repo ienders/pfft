@@ -1,13 +1,6 @@
 Pfft::Application.routes.draw do
 
-  #get '/users/sign_in(.:format)'
-  #post '/users/sign_in(.:format)'
-  #delete '/users/sign_out(.:format)'
-  #new_user_session GET      {:action=>"new", :controller=>"devise/sessions"}
-  #user_session POST     {:action=>"create", :controller=>"devise/sessions"}
-  #destroy_user_session DELETE  {:action=>"destroy", :controller=>"devise/sessions"}
-
-  devise_for :users
+  devise_for :users, :skip => [ :registrations ]
 
   root :to => 'showings#index'
 
