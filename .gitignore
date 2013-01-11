@@ -12,6 +12,11 @@
 
 /config/s3.yml
 
+
+.powrc
+.rvmrc
+
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
