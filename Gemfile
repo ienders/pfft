@@ -8,6 +8,7 @@ gem 'paperclip'
 gem 'devise'
 gem 'haml'
 gem 'aws-s3', :require => 'aws/s3'
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails'
